@@ -3,7 +3,7 @@
 
       
     <section>
-        <div class="container-fluid"> 
+        <div class="container"> 
             <div class="row">
                 <div class="col-md-12">
                     <h1>CATALOGO 2020</h1>
@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
-                    <p>DISFRUTA DE NUESTRAS OFERTAS!</p>
+                    <p id="agre">DISFRUTA DE NUESTRAS OFERTAS!</p>
                 </div>
             </div>
             <div class="row">
@@ -22,13 +22,18 @@
                     <div class="col-md-4">
                         <div class="card">
                             <div class="pic">
-                                <img src="<%= item.UrlImage %>" class="img-fluid" alt="...">
+                                <a href="Detalles.aspx?idArticulo=<% = item.id.ToString() %>">
+                                    <img src="<%= item.UrlImage %>" class="img" id="im" alt="...">
+                                    </a>  
                                  </div>
                             <div class="content">
                                 <h3><% = item.Nombre %></h3>
                                 <h4><% = "Precio: $" + item.Precio %></h4>
                                 <hr />
-                                <a href="" class="btn btn-primary">Agregar al carrito</a>
+                                <img src="https://image.flaticon.com/icons/png/512/23/23258.png" id="icono"/>
+                                <a href="" class="btn btn-primary" id="btnP">Agregar al carrito</a>
+                                <a href="Detalles.aspx?idArticulo=<% = item.id.ToString() %>" class="btn btn-secondary" id="btnS">Ver detalle</a>
+
                             </div>
                                 
                            
@@ -41,6 +46,9 @@
     
    
     <style>
+        container{
+            
+        }
         body {
             background-color: #ffe57f;
         }
@@ -48,7 +56,12 @@
         .card{
             background-color: #ffe57f;
             margin-bottom: 100px;
-
+            height: 450px;
+            border: solid 0px;
+        }
+        #im{
+            height: 250px;
+            
         }
 
         .col-md-12{
@@ -59,7 +72,7 @@
             padding: 10px;
         }
              
-        p{
+        #agre{
         font-size: 30px;
         font-weight: bold;
         font-family: Arial;
@@ -69,10 +82,47 @@
 
         .card .btn{
             float: right;
+           
         }
 
-        .img-fluid{
+         #btnP{
+            border-radius: 10px;
         }
+
+        #btnP:hover{
+            background: white;
+            border: solid 1px #ffe57f;
+            font-size: 15px;
+            color: black;
+            border: solid 0.5px black;
+        }
+
+        #btnS{
+            background: black;
+            border-radius: 10px;
+        }
+
+        #btnS:hover{
+            background: white;
+            border: solid 1px #ffe57f;
+            font-size: 15px;
+            border: solid 0.5px black;
+        }
+
+        #icono{
+           height: 34px;
+           margin-left: 20px;
+        }
+
+        hr {
+            border: 0 none black;
+            border-top: 1px solid black;
+            
+            display: block;
+            clear: both;
+            }
+        
+      
 
     </style>
 
