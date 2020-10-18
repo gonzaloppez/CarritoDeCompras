@@ -43,7 +43,7 @@ namespace WebForm
                 decimal total_precio = 0;
                 int cant = 0;
 
-                foreach (var item in listaCarritoCompras)// por cada item en la lista, sumar su precio con y sin iva por separado.
+                foreach (var item in listaCarritoCompras)
                 {
                     total_precio += item.Precio;
                     cant++;
@@ -66,7 +66,6 @@ namespace WebForm
             ArticuloNegocio negocio = new ArticuloNegocio();
             idArticulo = Convert.ToInt32(Request.QueryString["idArticulo"]);
             listaArticulos = negocio.listar();
-
             articuloCarrito = Buscar(listaArticulos, idArticulo);
             listaCarritoCompras = (List<Articulo>)Session["listaCarritoCompras"];
             listaCarritoCompras.Add(articuloCarrito);

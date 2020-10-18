@@ -30,7 +30,7 @@
                                 <h2>Cantidad: 1</h2>
                                 <h3><% = item.Nombre %></h3>
                                 <h4><% = "Precio: $" + item.Precio %></h4>
-                                                              <asp:Button Text="Elminar del carrito" ID="btnEliminar" OnClick="btnEliminar_Click" runat="server" /> 
+                               <asp:Button Text="Elminar del carrito" ID="btnEliminar" OnClick="btnEliminar_Click" runat="server" /> 
 
                                 
                             <hr />
