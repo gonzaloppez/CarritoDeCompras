@@ -22,10 +22,9 @@ namespace WebForm
                 int idAux = Convert.ToInt32(Request.QueryString["idArticulo"]);
                 articuloDetalle = listaAux.Find(Art => Art.id == idAux);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                Response.Redirect("Error.aspx");
             }
         }
     }

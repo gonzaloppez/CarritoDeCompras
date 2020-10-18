@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CatalogoArticulos.aspx.cs" Inherits="WebForm.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
+    <p><input type="search" id="Buscar" placeholder="ingrese producto a buscar...">
+            <asp:Button Text="Buscar" ID="btnBuscar" OnClick="btnBuscar_Click"  runat="server" />
+        </p>
       
     <section>
         <div class="container"> 
@@ -18,7 +20,6 @@
             <div class="row">
           <% foreach (Dominio.Articulo item in listaArticulo)
             { %>
-                
                     <div class="col-md-4">
                         <div class="card">
                             <div class="pic">
@@ -31,7 +32,7 @@
                                 <h4><% = "Precio: $" + item.Precio %></h4>
                                 <hr />
                                 <img src="https://image.flaticon.com/icons/png/512/23/23258.png" id="icono"/>
-                                <a href="" class="btn btn-primary" id="btnP">Agregar al carrito</a>
+                                <a href="CarritoCompras.aspx?idArticulo=<% = item.id.ToString() %>" class="btn btn-primary" id="btnP">Agregar al carrito</a>
                                 <a href="Detalles.aspx?idArticulo=<% = item.id.ToString() %>" class="btn btn-secondary" id="btnS">Ver detalle</a>
 
                             </div>

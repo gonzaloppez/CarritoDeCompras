@@ -17,7 +17,20 @@ namespace WebForm
         protected void Page_Load(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
-            listaArticulo = negocio.listar();
+            try
+            {
+                listaArticulo = negocio.listar();
+            }
+            catch (Exception ex)
+            {
+                Response.Redirect("Error.aspx");
+            }
+
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }

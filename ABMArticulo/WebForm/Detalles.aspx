@@ -10,7 +10,7 @@
             <hr class="my-4">
             <p id="detalle"><% = articuloDetalle.Descripcion %></p>
             <p class="lead">
-                <%-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>--%>
+                <a class="btn btn-primary btn-lg" href="CatalogoArticulos" role="button">volver...</a>
             </p>
         </div>
     </div>
