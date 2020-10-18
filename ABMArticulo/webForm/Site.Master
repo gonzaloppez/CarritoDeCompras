@@ -84,9 +84,15 @@
             </asp:ContentPlaceHolder>
             
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Aplicación ASP.NET by @AgustinChaparro - @GonzaloLópez </p>
+                <p id="foot"><%: DateTime.Now.Year %> - Aplicación ASP.NET by @AgustinChaparro - @GonzaloLópez </p>
             </footer>
         </div>
+
+        <style>
+            #foot{
+                text-align: right;
+            }
+        </style>
 
     </form>
 </body>

@@ -6,7 +6,7 @@
         <div class="jumbotron-fluid">
             <h1 class="display-4"><% = articuloDetalle.Nombre %></h1>
             <p class="lead">Precio Unitario: <% = articuloDetalle.Precio %></p>
-            <img src="<%= articuloDetalle.UrlImage %>" class="img" alt="..."
+            <img src="<%= articuloDetalle.UrlImage %>" class="img" alt="..." />
             <hr class="my-4">
             <p id="detalle"><% = articuloDetalle.Descripcion %></p>
             <p class="lead">

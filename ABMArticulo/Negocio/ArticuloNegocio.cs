@@ -104,6 +104,7 @@ namespace Negocio
 
         }
 
+        
         public void Eliminar(int id)
         {
             SqlConnection conexion = new SqlConnection();

@@ -10,3 +10,9 @@ E:\GITHUB\CarritoDeCompras\ABMArticulo\Dominio\obj\Debug\Dominio.csprojAssemblyR
 E:\GITHUB\CarritoDeCompras\ABMArticulo\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 E:\GITHUB\CarritoDeCompras\ABMArticulo\Dominio\obj\Debug\Dominio.dll
 E:\GITHUB\CarritoDeCompras\ABMArticulo\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Gonza\Desktop\Gonza\Facultad\Segundo Cuatri 2020\Programacion III\Carrito de compras\CarritoDeCompras\ABMArticulo\Dominio\bin\Debug\Dominio.dll
+C:\Users\Gonza\Desktop\Gonza\Facultad\Segundo Cuatri 2020\Programacion III\Carrito de compras\CarritoDeCompras\ABMArticulo\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Gonza\Desktop\Gonza\Facultad\Segundo Cuatri 2020\Programacion III\Carrito de compras\CarritoDeCompras\ABMArticulo\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\Gonza\Desktop\Gonza\Facultad\Segundo Cuatri 2020\Programacion III\Carrito de compras\CarritoDeCompras\ABMArticulo\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Gonza\Desktop\Gonza\Facultad\Segundo Cuatri 2020\Programacion III\Carrito de compras\CarritoDeCompras\ABMArticulo\Dominio\obj\Debug\Dominio.dll
+C:\Users\Gonza\Desktop\Gonza\Facultad\Segundo Cuatri 2020\Programacion III\Carrito de compras\CarritoDeCompras\ABMArticulo\Dominio\obj\Debug\Dominio.pdb

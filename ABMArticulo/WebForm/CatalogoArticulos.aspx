@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="row">
-          <% foreach (Dominio.Articulo item in listaArticulo)
+          <% foreach (Dominio.Articulo item in listaArticulos)
             { %>
                     <div class="col-md-4">
                         <div class="card">
@@ -40,7 +40,7 @@
                            
                         </div>
                          </div>                      
-             
+            
            <%  } %>
         </div>
         </section>
