@@ -1,66 +1,62 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CarritoCompras.aspx.cs" Inherits="WebForm.CarritoCompras" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    
-   
-   
-    <div><div class="container"> 
+
+    <div>
+        <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <h1 id="head">CARRITO DE COMPRAS</h1>
-                    
+
                     <br />
                     <br />
                 </div>
             </div>
         </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Codigo</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Precio</th>
+                </tr>
+            </thead>
+            <div>
+                <% foreach (Dominio.Articulo item in listaCarritoCompras)
+                    { %>
+            <tbody>
+                <tr>
+                    <td><%=item.id %></td>
+                    <td><%=item.Nombre %></td>
+                    <td><%=item.Precio %></td>
+                    <td>
+                        <asp:Button Text="Elminar del carrito" ID="btnEliminar" OnClick="btnEliminar_Click" runat="server" />
+                    </td>
+                </tr>
+            </tbody>
 
-        <div>
-        
-    <% foreach (Dominio.Articulo item in listaCarritoCompras)
-            { %>
-                    <div class="col-md-12">
-                        
-                        <div class="card">
-                            <div class="pic">
-                                <a href="Detalles.aspx?idArticulo=<% = item.id.ToString() %>">
-                                    <img src="<%= item.UrlImage %>" class="img" id="im" alt="...">
-                                    </a>  
-                                 </div>
-                            <div class="content">
-                                <h2>Cantidad: 1</h2>
-                                <h3><% = item.Nombre %></h3>
-                                <h4><% = "Precio: $" + item.Precio %></h4>
-                               <asp:Button Text="Elminar del carrito" ID="btnEliminar" OnClick="btnEliminar_Click" runat="server" /> 
-
-                                
-                            <hr />
-                                
-                            </div>                       
-                            </div>
-                         </div> <br />
-            
-            
-           <%  } %>
-            <div class="container-fluid">
+            <%  } %>
+        </table>
+        <div class="container-fluid">
             <div class="col-md-6">
-                               <h1 id="cant">Cantidad de articulos seleccionados:  <asp:Label Text="" ID="lblcant" runat="server" /></h1>
+                <h1 id="cant">Cantidad de articulos seleccionados: 
+                    <asp:Label Text="" ID="lblcant" runat="server" /></h1>
 
             </div>
             <div class="col-md-6">
                 <div class="row">
-               <h1 id="total">Total: $<asp:Label Text="" ID="lblTotal" runat="server" /></h1>
-            </div>
-            </div>
-            </div>
+                    <h1 id="total">Total: $<asp:Label Text="" ID="lblTotal" runat="server" /></h1>
                 </div>
-        </div><br />
+            </div>
+        </div>
+    </div>
+    </div><br />
 
-        
-        <div class="col-md-12">
-               <a href="CatalogoArticulos.aspx" class="btn btn-primary" id="btnP">Volver al Catalogo</a>
-                <asp:Button Text="Finalizar Compra" class="btn btn-primary" ID="btnComprar" OnClick="btnComprar_Click" runat="server" />
 
-           </div>
+    <div class="col-md-12">
+        <a href="CatalogoArticulos.aspx" class="btn btn-primary" id="btnP">Volver al Catalogo</a>
+        <asp:Button Text="Finalizar Compra" class="btn btn-primary" ID="btnComprar" OnClick="btnComprar_Click" runat="server" />
+
+    </div>
     <br />
     <br />
     <br />

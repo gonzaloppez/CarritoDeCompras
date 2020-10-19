@@ -15,13 +15,14 @@ namespace WebForm
     {
         public List<Articulo> listaArticulos { get; set; }
         public List<Articulo> listaBusqueda { get; set; }
+        
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
                 listaArticulos = negocio.listar();
-                
             }
             catch (Exception ex)
             {
@@ -40,5 +41,6 @@ namespace WebForm
                             || x.Marca.Descripcion.ToUpper().Contains(Request.Form["Buscar"].ToUpper()));
             listaArticulos = listaBusqueda;
         }
+
     }
 }

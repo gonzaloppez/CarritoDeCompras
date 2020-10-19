@@ -6,6 +6,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Negocio;
+using Antlr.Runtime.Misc;
+using System.Data;
 
 namespace WebForm
 {
@@ -20,7 +22,6 @@ namespace WebForm
         protected void Page_Load(object sender, EventArgs e)
 
         {
-            
             try
             {
                 if (listaCarritoCompras == null)
@@ -32,7 +33,6 @@ namespace WebForm
                 {
                     Session.Add("listaCarritoCompras", listaCarritoCompras);
                 }
-
                 if (Request.QueryString["idArticulo"] != null)
                 {
                     AgregarArticulo();
@@ -52,6 +52,7 @@ namespace WebForm
                 lblcant.Text = cant.ToString();
                 lblTotal.Text = total_precio.ToString();
 
+                
             }
             catch (Exception ex)
             {
@@ -86,7 +87,7 @@ namespace WebForm
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
-            
+
         }
         protected void btnComprar_Click(object sender, EventArgs e)
         {
