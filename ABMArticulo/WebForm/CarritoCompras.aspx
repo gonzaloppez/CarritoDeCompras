@@ -58,7 +58,7 @@
         
         <div class="col-md-12">
                <a href="CatalogoArticulos.aspx" class="btn btn-primary" id="btnP">Volver al Catalogo</a>
-                           <a href="home.aspx" class="btn btn-primary" id="btnP">Finalizar compra</a>
+                <asp:Button Text="Finalizar Compra" class="btn btn-primary" ID="btnComprar" OnClick="btnComprar_Click" runat="server" />
 
            </div>
     <br />

@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CatalogoArticulos.aspx.cs" Inherits="WebForm.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <p><input type="search" id="Buscar" placeholder="ingrese producto a buscar...">
+    <p><input type="search" name = "Buscar" placeholder="ingrese producto a buscar...">
             <asp:Button Text="Buscar" ID="btnBuscar" OnClick="btnBuscar_Click"  runat="server" />
         </p>
       

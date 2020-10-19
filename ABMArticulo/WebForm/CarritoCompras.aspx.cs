@@ -65,13 +65,12 @@ namespace WebForm
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
             idArticulo = Convert.ToInt32(Request.QueryString["idArticulo"]);
+            listaCarritoCompras = (List<Articulo>)Session["listaCarritoCompras"];
             listaArticulos = negocio.listar();
             articuloCarrito = Buscar(listaArticulos, idArticulo);
-            listaCarritoCompras = (List<Articulo>)Session["listaCarritoCompras"];
             listaCarritoCompras.Add(articuloCarrito);
             Session["listaCarritoCompras"] = listaCarritoCompras;
         }
-
         private Articulo Buscar(List<Articulo> lista, Int32 id)
         {
             foreach (Articulo item in lista)
@@ -87,9 +86,13 @@ namespace WebForm
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
-
+            
         }
-
+        protected void btnComprar_Click(object sender, EventArgs e)
+        {
+            listaCarritoCompras.Clear();
+            Response.Redirect("Home.aspx");
+        }
     }
        
           
