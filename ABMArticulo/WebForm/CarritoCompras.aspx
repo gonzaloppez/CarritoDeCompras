@@ -29,7 +29,7 @@
                     <td><%=item.Nombre %></td>
                     <td><%=item.Precio %></td>
                     <td>
-                        <asp:Button Text="Elminar del carrito" ID="btnEliminar" OnClick="btnEliminar_Click" runat="server" />
+                        <a href="CarritoCompras.aspx?idArticuloEliminar=<%= item.id.ToString() %>" class="btn btn-primary" id="btnP">Eliminar del carrito</a> <%//sin to.String %>
                     </td>
                 </tr>
             </tbody>
@@ -55,7 +55,7 @@
     <div class="col-md-12">
         <a href="CatalogoArticulos.aspx" class="btn btn-primary" id="btnP">Volver al Catalogo</a>
         <asp:Button Text="Finalizar Compra" class="btn btn-primary" ID="btnComprar" OnClick="btnComprar_Click" runat="server" />
-
+        
     </div>
     <br />
     <br />

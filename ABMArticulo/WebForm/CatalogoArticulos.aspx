@@ -1,8 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CatalogoArticulos.aspx.cs" Inherits="WebForm.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <p><input type="search" name = "Buscar" placeholder="ingrese producto a buscar...">
-            <asp:Button Text="Buscar" ID="btnBuscar" OnClick="btnBuscar_Click"  runat="server" />
+    <div class="col-md-12">
+    <p><input type="search" name = "Buscar" placeholder="Buscar producto">
+        
+                    <asp:Button Text="Buscar" ID="btnBuscar" OnClick="btnBuscar_Click"  runat="server" />
         </p>
+        </div>    
+        
       
     <section>
         <div class="container"> 
@@ -47,6 +51,8 @@
     
    
     <style>
+        
+
         container{
             
         }

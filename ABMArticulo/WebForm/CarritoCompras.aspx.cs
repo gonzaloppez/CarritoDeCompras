@@ -38,6 +38,11 @@ namespace WebForm
                     AgregarArticulo();
                 }
 
+                if (Request.QueryString["idArticuloEliminar"] != null)
+                {
+                    eliminarArticulo();
+                }
+
                 listaCarritoCompras = (List<Articulo>)Session["listaCarritoCompras"];
 
                 decimal total_precio = 0;
@@ -52,12 +57,11 @@ namespace WebForm
                 lblcant.Text = cant.ToString();
                 lblTotal.Text = total_precio.ToString();
 
-                
+               
             }
             catch (Exception ex)
             {
                 Response.Redirect("Error.aspx");
-
             }
                      
         }
@@ -68,11 +72,20 @@ namespace WebForm
             idArticulo = Convert.ToInt32(Request.QueryString["idArticulo"]);
             listaCarritoCompras = (List<Articulo>)Session["listaCarritoCompras"];
             listaArticulos = negocio.listar();
-            articuloCarrito = Buscar(listaArticulos, idArticulo);
+            articuloCarrito = BuscarArticulo(listaArticulos, idArticulo);
             listaCarritoCompras.Add(articuloCarrito);
             Session["listaCarritoCompras"] = listaCarritoCompras;
         }
-        private Articulo Buscar(List<Articulo> lista, Int32 id)
+
+        public void eliminarArticulo()
+        {
+            idArticulo = Convert.ToInt32(Request.QueryString["idArticuloEliminar"]);
+            listaCarritoCompras = (List<Articulo>)Session["listaCarritoCompras"];
+            listaCarritoCompras.Remove(listaCarritoCompras.Find(id => idArticulo == id.id)); //expresion lambda
+            Session["listaCarritoCompras"] = listaCarritoCompras;
+        }
+
+        private Articulo BuscarArticulo(List<Articulo> lista, Int32 id)
         {
             foreach (Articulo item in lista)
             {
@@ -85,11 +98,7 @@ namespace WebForm
             return articuloCarrito;
         }
 
-        protected void btnEliminar_Click(object sender, EventArgs e)
-        {
-
-        }
-        protected void btnComprar_Click(object sender, EventArgs e)
+       protected void btnComprar_Click(object sender, EventArgs e)
         {
             listaCarritoCompras.Clear();
             Response.Redirect("Home.aspx");
